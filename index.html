@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>NotePro</title>
+        <meta name="description" content="NotePro ist eine Webnotizenapplikation mit diversen Funktionen">
+        <link href="css/centralNotes.css" rel="stylesheet">
+        <link href="css/mainNotes.css" rel="stylesheet">
+        <script src="js/handlebars-v4.0.10.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/jquery-3.2.1.js"></script>
+    </head>
+    <body class="verticalbox view">
+        <div id="target"></div>
+            <div>
+                <header>
+                    <h1>NotePro</h1>
+                    <p class="idea">Mit NotePro seine Notizen bewirtschaften</p>
+                    <ul class="navigation">
+                        <div class="navibutton">
+                            <li><a href="index.html" id="uebersicht">Übersicht</a></li>
+                            <li><a href="createNote.html" id="neuenotes">Neue Notiz</a></li>
+                        </div>
+                    </ul>
+                </header>
+                <section class="main horizontalbox space-between">
+                    <aside>
+                        <div class="naviselect">
+                              <li>
+                                  <select id="select-backgroundcolor" onchange="notesApp.changeBackGround(this.value)">
+                                      <option value="gw" >Hintergrund Grau-Weiss</option>
+                                      <option value="wb" >Hintergrund Weiss-Schwarz</option>
+                                  </select>
+                              </li>
+                        </div>
+                    </aside>
+                    <article>
+                        <form>
+                            <p>Ordnen nach:</p>
+                            <div class="items">
+                                <div class="item">
+                                    <input class="sortbutton" type="button" id="sortimportance" value="Nach Wichtigkeit" onclick="notesApp.sortNotes(this)">
+                                </div>
+                                <div class="item">
+                                    <input class="sortbutton" type="button" id="sortplanedfinished" value="Nach Enddatum" onclick="notesApp.sortNotes(this)"></div>
+                                <div class="item">
+                                    <input class="sortbutton" type="button" id="sortcreate" value="Nach Erstellungs-Datum" onclick="notesApp.sortNotes(this)"></div>
+                                <div class="item">
+                                    <input class="sortbutton" type="button" id="sortfinished" value="Abgeschlossen" onclick="notesApp.sortNotes(this)"></div>
+                            </div>
+                            <div id="noteslist">
+                            </div>
+                                <script id="template" type="text/x-handlebars-template">
+                                    {{#each this}}
+                                         <div>
+                                             <div class="notes-items">
+                                                 <div class="notes-item">
+                                                     <div class="text">
+                                                         <div class="text-item">
+                                                             {{finished}}
+                                                         </div>
+                                                         <div class="text-item">
+                                                             {{{checked-area checked}}}
+                                                         </div>
+                                                      </div>
+                                                 </div>
+                                              <div class="notes-item">
+                                                  <div class="text">
+                                                      <div class="text-item">
+                                                         {{{formatTitle title}}}
+                                                      </div>
+                                                      <div class="text-item">
+                                                         {{{textarea-content content}}}
+                                                      </div>
+                                                   </div>
+                                              </div>
+                                                 <div class="notes-item">
+                                                     {{{count-importance importance}}}
+                                                 </div>
+                                                 <div class="notes-item">
+                                                      {{{edit_button editor}}}
+                                                  </div>
+                                               </div>
+                                            </div>
+                                    {{/each}}
+                                 </script>
+                        </form>
+                    </article>
+                </section>
+                <footer>
+                <p>
+                    CAS Frontend Engineering 2017 - Projektarbeit 1
+                    <br>
+                    Jan Eppenberger - <a href="https://github.com/jeppenbe" target="_blank">GitHub</a>
+                </p>
+                </footer>
+        </div>

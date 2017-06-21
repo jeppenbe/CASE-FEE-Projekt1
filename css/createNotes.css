@@ -1,0 +1,78 @@
+/* ====================================
+   2. Layout Styles
+   ================================= */
+/* ====================================
+   3. Other Styles
+   ================================= */
+form {
+    margin-top:10px;
+}
+form .field-group{
+    display: flex;
+    margin: 0 0 12px 0;
+}
+form .field-group .label{
+    flex: 1;
+    text-align: right;
+    margin: 0 8px 0 0;
+    padding: 0;
+}
+form .field-group .field{
+    flex: 8;
+}
+form .field-group:last-child{
+    display: flex;
+    justify-content: flex-end;
+}
+input, textarea{
+    padding: .6em 1em;
+    letter-spacing: .09em;
+    font-size: 87.5%;
+    border: solid 1px #b6b6b6;
+    background: #fff;
+    box-sizing: border-box;
+    font-family: Verdana,Arial,Garamond, sans-serif;
+    outline:0;
+}
+input:not([type="date"]), textarea{
+    width: 80%;
+    outline:0;
+}
+input[type="radio"]{
+    cursor:pointer;
+    display:none;
+}
+input[type="button"] {
+     margin: 20px auto;
+     width: 80%;
+     background-color: #b6b6b6;
+ }
+input[type="button"]:hover {;
+    background-color: white;
+}
+fieldset, fieldset label{
+    margin:0;
+    padding:10px;
+}
+.importance{
+    border:none;
+    float:left;
+}
+.importance > input {display: none}
+.importance > label:before{
+    margin:5px;
+    font-size:3em;
+    display:inline-block;
+    content:"\2718"
+}
+.importance > .half:before{
+    content:"\2718";
+    position:absolute;
+}
+.importance > label {
+    color:#b6b6b6;
+    float:right;
+}
+.importance > input:checked ~ label { color: #000000;  }
+
+

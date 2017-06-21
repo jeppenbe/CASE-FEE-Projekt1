@@ -1,0 +1,77 @@
+/*===============================
+Layout-Stylesheet
+Datei: layoutNotes.css
+Datum: 03.06.2017
+Autor: Jan Eppenberger
+================================== */
+* {padding: 0; margin: 0;}
+header, footer, article, aside{
+    border: 1px solid #b6b6b6;
+    padding: 0.25em;
+    margin: 0.25em;
+    border-radius: 0.25em;
+    background-color: #DDDDDD;
+    font-weight: 300;
+    letter-spacing: .09em;
+}
+html, body, .content{
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    background: white;
+    font-family: Verdana,Arial,Garamond, sans-serif;
+    font-size: 87.5%;
+}
+.verticalbox {
+    display: flex;
+    flex-direction: column;
+}
+.horizontalbox{
+    display: flex;
+    flex-direction:row;
+}
+.space-between{justify-content: space-between;}
+header, footer{height: 75px;}
+.main{flex:1;}
+article{flex:5;}
+aside{flex:1;}
+footer a {
+    color: black;
+    text-decoration: underline;
+}
+footer{text-align: center;}
+a:hover {color: red;  }
+.idea{
+    padding: 5px 0;
+    margin-bottom: 0;
+}
+h2,p {margin-bottom: 1em;}
+.navigation li {
+    display: inline;
+    list-style-type: none;
+    margin:0;
+}
+.navigation {
+    margin: 3px auto;
+    text-align: right;}
+.navigation a {
+    background-color: #b6b6b6;
+    border: 1px solid #b6b6b6;
+    border-radius: 4px 4px 0 0;
+    color: black;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+.navigation a:hover, a:focus {
+    background-color: white;
+    border-bottom-color: white;
+    color: black;
+    text-decoration: none;
+}
+article {
+    background:  #DDDDDD;
+    border: 1px solid #b6b6b6;
+    border-radius: 4px;
+    margin: 5px;
+    padding: 0.5em;
+}

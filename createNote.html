@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head> <!-- Im Head stehen Informationen über die Webseite -->
+        <meta charset="utf-8">
+        <title>NotePro</title>
+        <meta name="description" content="NotePro ist eine Webnotizenapplikation mit diversen Funktionen">
+        <link href="css/createNotes.css" rel="stylesheet" media="screen">
+        <link href="css/centralNotes.css" rel="stylesheet" media="screen">
+        <script src ="js/localStore.js"></script>
+        <script src="js/jquery-3.2.1.js"></script>
+    </head>
+    <body class="verticalbox view">
+        <div>
+            <header>
+                <h1>NotePro</h1>
+                <p class="idea">Mit NotePro seine Notizen bewirtschaften</p>
+                <ul class="navigation">
+                    <li><a href="index.html">Übersicht</a></li>
+                    <li><a href="createNote.html">Neue Notiz</a></li>
+                </ul>
+            </header>
+            <section class="main horizontalbox space-between">
+                <article>
+                    <form id="createNotes">
+                        <div class="field-group">
+                            <label for="title" class="label">Titel:</label>
+                            <div class="field">
+                                <input name="notes" id="title" required>
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <label for="content" class="label">Beschreibung:</label>
+                            <div class="field">
+                                <textarea name="notes" id="content" rows="10" cols="50" required></textarea>
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <label class="label">Wichtigkeit:</label>
+                            <div class="field">
+                                <fieldset class="importance" id="importanceNotes" >
+                                    <input type="radio" name="notes" id="imp5" value="5" onclick="noteEdiApp.getImportance(this.value)">
+                                    <label for="imp5" ></label>
+                                    <input type="radio" name="notes" id="imp4" value="4" onclick="noteEdiApp.getImportance(this.value)">
+                                    <label for="imp4" ></label>
+                                     <input type="radio" name="notes" id="imp3" value="3" onclick="noteEdiApp.getImportance(this.value)">
+                                    <label  for="imp3" ></label>
+                                    <input type="radio" name="notes" id="imp2" value="2" onclick="noteEdiApp.getImportance(this.value)">
+                                    <label  for="imp2" ></label>
+                                    <input type="radio" name="notes" id="imp1" value="1" onclick="noteEdiApp.getImportance(this.value)">
+                                    <label  for="imp1" ></label>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <label for="finished" class="label" required>Erledigt:</label>
+                                <div class="field">
+                                    <input name="finit" id="finished" type="date" onblur="noteEdiApp.validateDate()">
+                                </div>
+                        </div>
+                        <div class="field-group">
+                            <div class= "field">
+                                <input id="save" name="notes" type="button" value="Speichern">
+                            </div>
+                            <div class= "field">
+                                <input id="cancel" name="notes" type="button" value="Abbrechen" onclick="noteEdiApp.cancelSave()">
+                            </div>
+                        </div>
+                    </form>
+                </article>
+        </section>
+        <footer>
+            <p>
+                <br>
+                CAS Frontend Engineering 2017 - Projektarbeit 1
+                <br>
+                Jan Eppenberger - <a href="https://github.com/jeppenbe" target="_blank">GitHub</a>
+            </p>
+        </footer>
+    </div>

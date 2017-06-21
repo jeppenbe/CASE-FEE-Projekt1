@@ -1,0 +1,143 @@
+/* ====================================
+   2. Layout Styles
+   ================================= */
+select {
+    background-color: #b6b6b6;
+    font-weight: 300;
+    letter-spacing: .09em;
+    list-style-type: none;
+    font-size: 87.5%;
+    outline: 0;
+}
+.naviselect{ float: left; }
+.navibutton{float: right; }
+
+.items{
+    display:flex;
+    flex-wrap: wrap;
+
+}
+.items .item{
+    flex:1 0 100px;
+    margin-left:5px;
+    margin-top:10px;
+    box-sizing:border-box;
+    color:black;
+    padding:10px;
+    text-align:center;
+}
+.sortbutton
+{
+    margin: 2% auto;
+    width: 90%;
+    background:#b6b6b6;
+    color:black;
+    border:  solid 1px #b6b6b6;
+    letter-spacing: .09em;
+    font-weight: 300;
+    outline: 0;
+    height: 30px;
+}
+.sortbutton:hover
+{
+    background:white;
+    color:black;
+}
+.items :last-child
+{
+    margin-left:20px;
+}
+#notes-margin{
+    margin-bottom:20px;
+}
+#noteslist{
+    margin-top:20px;
+}
+.notes-items{
+    display:flex;
+    flex-wrap:wrap;
+    border: solid 1px #b6b6b6;
+    justify-content: center;
+    position: relative;
+    align-content: space-around;
+    letter-spacing: .09em;
+    font-weight: 300;
+ }
+.notes-items .notes-item{
+    flex:1 1 15%;
+    margin-left:2px;
+    margin-top:2px;
+    box-sizing:border-box;
+    color:black;
+    padding:5px;
+    text-align: justify;
+    display:flex !important;
+    text-align: start;
+}
+.notes-items:last-child
+{
+    margin-bottom: 10px;
+}
+.checkboxNotesList {
+    background: transparent;
+    border: 1px solid #b6b6b6;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5%;
+    margin-top: 50%;
+    vertical-align: sub;
+}
+.textAreaNotesList {
+    padding: 0.5em 0.5em;
+    letter-spacing: .09em;
+    border: solid 1px #b6b6b6;
+    background: #fff;
+    font-family: Verdana,Arial,Garamond, sans-serif;
+    outline:0;
+    font-weight: 300;
+    width: 25em;
+    height: 10em;
+}
+.buttonNotesList {
+    letter-spacing: .09em;
+    border: solid 1px #b6b6b6;
+    background: #b6b6b6;
+    box-sizing: border-box;
+    font-family: Verdana,Arial,Garamond, sans-serif;
+    outline:0;
+    font-weight: 300;
+    width: 90%;
+    height: 60px;
+    margin-top:40%;
+    margin-left: 5%
+}
+.buttonNotesList:hover
+{
+    background:white;
+    color:black;
+}
+.importanceNotesList > label:before {
+    margin-top:130%;
+    font-size:4em;
+    display:inline-block;
+    content:"\2718";
+    color:black;
+    border: none;
+}
+.importanceNotesList{
+    border:none;
+    float:left;
+}
+.text{
+    display:flex;
+    flex-direction:column;
+}
+.text-item{
+    flex:1 1 0;
+}
+li{list-style-type: none;}
+input[type="radio"]{
+    cursor:pointer;
+    display:none;
+}
